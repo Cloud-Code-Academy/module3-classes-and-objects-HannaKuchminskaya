@@ -46,8 +46,8 @@ public with sharing class ClassesObjectsMethods {
         string substring = s.substring(0, 5);
         string lowercase = s.toLowerCase();
 
-        List <String> result = new List <String> ();
-        result.add (size1);
+        List<String> result = new List<String>();
+        result.add(size1);
         result.add(substring);
         result.add(lowercase);
         return result;
@@ -89,9 +89,9 @@ public with sharing class ClassesObjectsMethods {
         uniqueWords.addAll(words);
         string result = '';
         for (string w:uniqueWords) {
-            result=result +W+' ';
+            result = result + w +' ';
         }
-        result=result.trim();
+        result = result.trim();
         return result; 
     }
 
@@ -445,7 +445,7 @@ public with sharing class ClassesObjectsMethods {
      * @return The Person object of the older person.
      */
     public static Person getOlderPerson(Person person1, Person person2) {
-        if (person1.age>person2.age){
+        if (person1.getAge()>person2.getAge()){
             return person1;
         }else if (person2.age>person1.age){
             return person2;
